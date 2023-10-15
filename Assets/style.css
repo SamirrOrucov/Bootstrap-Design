@@ -1,10 +1,14 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
 nav {
   position: fixed;
+  z-index: 1;
 
-  width: 100%;
+  width: 100vw;
   height: 76px;
   background-color: rgba(44, 62, 80, 255);
-  /* position: fixed;    */
 }
 .navbar {
   display: flex;
@@ -14,7 +18,9 @@ nav {
   font-size: 20px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
+.navbar .bars{
+  display: none;
+}
 .navbar ul {
   display: flex;
   gap: 30px;
@@ -27,23 +33,23 @@ nav {
   color: rgba(26, 188, 156, 255);
   transition: 0.5s;
 }
-.main {
-}
+
 .head-div {
   display: flex;
   flex-direction: column;
   background-color: #1abc9c;
   align-items: center;
   justify-content: center;
-  height: 72vh;
+  min-width: 10vh;
+  height: 99vh;
   color: white;
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .head-div img {
   width: 300px;
   height: 300px;
-}
-.head-div h1 {
 }
 
 .fa-star {
@@ -53,15 +59,19 @@ nav {
 .graphic {
   padding-top: 20px;
   font-size: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 .portfolio-container {
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
   color: #2c3e50;
+  font-family: "Montserrat", sans-serif;
 }
 .portfolio-container h1 {
+  padding-top: 20px;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -106,11 +116,226 @@ nav {
 .cards:hover .hover-div {
   opacity: 1;
 }
-.about-div{
+.about-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    height: 60vh;
+  padding-top: 40px;
+  background-color: #1abc9c;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+.about-div h1 {
+  font-size: 50px;
+}
+.about-div .text {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  padding-top: 70px;
+  gap: 60px;
+}
+.text p {
+  width: 384px;
+  height: 120px;
+}
+.download-box {
+  margin-top: 50px;
+  display: flex;
+  width: 232px;
+  height: 66px;
+  border: 2px solid rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 300;
+}
+.download-box:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+.contact-container {
+  padding-top: 60px;
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: "Poppins", sans-serif;
+  color: #2c3e50;
+}
+.contact-container .fa-star {
+  font-size: 60px;
+}
+.contact-container h1 {
+  font-size: 60px;
+}
+
+.form {
+  display: flex;
+  width: 700px;
+  height: 50px;
+  border: 0.5px solid grey;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.form:focus {
+  outline: none;
+}
+.let {
+  padding-top: 50px;
+}
+
+.name-text {
+  /* position: absolute; */
+  color: black;
+
+  z-index: 1;
+  font-size: 30px;
+}
+.textbox {
+  display: flex;
+  flex-direction: column;
+}
+#textbox {
+  margin-top: 50px;
+  width: 615px;
+  height: 160px;
+}
+
+form .btn {
+  margin-top: 40px;
+  width: 100px;
+  height: 60px;
+  background-color: #1abc9c;
+  border-radius: 10px;
+  color: white;
+  outline-color: #1abc9c;
+  border: #1abc9c;
+}
+.foot-div {
+  background-color: #2c3e50;
+  height: 25vh;
+  display: flex;
+  justify-content: space-between;
+}
+.foot-div div {
+  width: 35%;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+.foot-div p {
+  font-size: 18px;
+}
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 50px;
+  font-size: 34px;
+  gap: 20px;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.social .incons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.social .text {
+  font-size: 34px;
+}
+.incons .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgb(255, 255, 255);
+  font-size: 20px;
+  transition: 0.5s;
+}
+.icon:hover {
+  color: #2c3e50;
+  background-color: white;
+cursor: pointer;}
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 34px;
+  gap: 20px;
+}
+.about a {
+  color: #1abc9c;
+  text-decoration: underline;
+}
+
+
+  /* Extra small devices (phones, 600px and down) 
+@media only screen and (max-width: 600px) {
+  .navbar ul {
+    display: none;
+  }
+  .head-div{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+font-size: 24px;
+  }
+  .card-container{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 60vh;
-    background-color: #1abc9c;
 }
+.navbar .bars{
+  display: block;
+}
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) 
+@media only screen and (min-width: 600px) {
+ 
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) {
+  .card-container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+}
+/* Large devices (laptops/desktops, 992px and up) 
+@media only screen and (min-width: 992px) {
+ 
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) 
+@media only screen and (min-width: 1200px){
+
+}
+  
+
+*/
+ 
